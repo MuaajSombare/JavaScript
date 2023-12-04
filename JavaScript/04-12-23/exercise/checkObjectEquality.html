@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>objCheck</title>
+</head>
+<body>
+  <script>
+    let product1 = {
+      company : 'Myntra',
+      product : 't-shirt',
+      price : 230,
+      deliverTime : '1-day',
+    };
+    let product2 = {
+      company : 'Myntra',
+      product : 't-shirt',
+      price : 230,
+      deliverTime : '1-day',
+    };
+    let product3 = {
+      company : 'Myntra',
+      product : 't-shirt',
+      price : 240,
+      deliverTime : '1-day',
+    };
+
+    function isIdenticalProduct(product1, product2){
+      if(typeof product1 !== 'object' || typeof product2 !== 'object') {
+        return console.warn('parameter passed is not an object');
+      }
+      if(product1 == product2) return true; //both refere same object
+
+      if( product1.company === product2.company &&
+          product1.price === product2.price &&
+          product1.product === product2.product
+         ){
+          return true;
+         }
+         else return false;
+    }
+
+    //calling funct
+    console.log(isIdenticalProduct(product1, ''));
+    console.log(isIdenticalProduct(product1,product2));
+    console.log(isIdenticalProduct(product1,product3));
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>objecs</title>
+</head>
+<body>
+  <script>
+    // let product={
+    //   company : "mange",
+    //   price : 841,
+    //   'item-name' : 't-shirt'
+    // };
+    // console.log(product);
+    // // accessing useng bracke notation
+    // // console.log(product['item-name']);
+
+    // // accesing specific property
+    // // console.log(`t-shirt price is ${product.price}`);
+
+    // // deleting property in object
+    // delete product['company'];
+    // console.log(product);
+
+    // inside object
+    // let product={
+    //   company : "mange",
+    //   price : 841,
+    //   'item-name' : 't-shirt',
+
+    //   // creating function(its now obj method)
+    //   displayPrice : function(){
+    //     console.log(`product price is ${this.price}`);
+    //   }
+    // };
+    // //calling obj method
+    // product.displayPrice();
+
+    // obj shortcuts
+    // obj desturcturing
+    let product={
+      company : "mange",
+      price : 841,
+      'item-name' : 't-shirt'
+    };
+
+    let{company,price} = product;
+    console.log(price,company);
+    // residing obj property inside another obj
+    let company1 = product.company;
+    console.log(company1);
+
+  </script>
+</body>
+</html>
